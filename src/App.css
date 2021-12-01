@@ -2,16 +2,26 @@
 .TodoContainer {
   height: 100%;
   width: 100%;
+  background-color: yellow;
 }
 
 .NavBar {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 20%;
-  background-color: aquamarine;
+  background-color: black;
+  color: white;
+  text-align: right;
 }
 
 .Header {
-  text-align: center;
+  text-align: left;
+}
+
+.Body {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: white;
+}
+
+.Click {
+  margin-left: 20%;
+  margin-right: 20%;
 }
