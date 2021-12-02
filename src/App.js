@@ -7,6 +7,7 @@ import Header from './component/Header';
 import Body from './component/Body';
 import Click from './component/Click';
 import Hook from './component/HookExample';
+import Timer from './component/UseEffect';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <div className="Hook">
           <Hook />
         </div>
-        
+        <Timer />
     </div>
   );
 }
