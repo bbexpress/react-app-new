@@ -28,26 +28,41 @@ function Timer(props) {
     //     setCalculation(()=> count *2);
     // },[count])
 
-    const [user, setUser] = useState({
-        username: ""
-    });
-    const [message, setMessage] = useState("");
+    // const [user, setUser] = useState({
+    //     username: ""
+    // });
+    // const [message, setMessage] = useState("");
 
-    const updateMessage =()=> {
-        setMessage(previousState =>{
-            return{...previousState, message: "Hello " + user.username}
-        });
-    }
+    // const updateMessage =()=> {
+    //     setMessage(previousState =>{
+    //         return{...previousState, message: "Hello " + user.username}
+    //     });
+    // }
+
+
+    const[count, setCount] = useState(0);
+    const[even, setEven] = useState("even");
+
+    useEffect(()=>{
+        setEven(()=> count % 2 == 0 ? "even" : "odd");
+    },[count]);
+
+    const [name, setName] = useState("");
+    const [nameGreet, setNameGreet] = useState("");
 
 
     return (
         <div>
-            <form>
-                <input type="text" id="fname" name="fname" value="name"></input>
-                <input type="submit" value="Submit" onClick={setUser(this.fname)}></input>
-            </form> 
-            
-            <h2>{user}{message}</h2>
+            <form onSubmit={(event) => {event.preventDefault(); setNameGreet((e)=> name)}}>
+                <label htmlFor="nameInput">Name: </label>
+                <input type="text" name="nameInput" onChange={(event)=> setName((e)=> event.target.value)} />
+                <button type="submit">Submit</button>
+                <p>Welcome {nameGreet}!</p>
+            </form>
+
+            <p>You've clicked {count} times!</p>
+            <button onClick={() => setCount((c)=> c + 1)}>Click me</button>
+            <p>The number of times you have clicked is {even}!</p>
             
         </div>
     )

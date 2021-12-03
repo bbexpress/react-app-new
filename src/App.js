@@ -8,6 +8,9 @@ import Body from './component/Body';
 import Click from './component/Click';
 import Hook from './component/HookExample';
 import Timer from './component/UseEffect';
+import Context from './component/Context';
+import RefHook from './component/RefHook';
+import StyleComponent from './component/StyleComponent';
 
 function App() {
   return (
@@ -30,6 +33,13 @@ function App() {
           <Hook />
         </div>
         <Timer />
+        <div>
+          <Context />
+        </div>
+        <div>
+          <RefHook />
+        </div>
+        <StyleComponent />
     </div>
   );
 }
