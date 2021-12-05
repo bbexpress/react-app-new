@@ -3,7 +3,7 @@ import { useState, createContext,useContext } from 'react'
 import Context2 from './Context2'
 const UserContext = createContext();
 
-export default function Context() {
+function Context() {
 
     const [user,setUser] = useState("dave miller");
 
@@ -17,3 +17,6 @@ export default function Context() {
         </div>
     )
 }
+
+export default Context;
+export {UserContext};
